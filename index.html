@@ -1,56 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>こんにちは</title>
-    <style>
-        /* 簡単なデザインを追加 */
-        body { 
-            font-family: sans-serif; 
-            text-align: center; 
-            margin: 20px;
-        }
-        #denpa-analyzer-section {
-            padding: 20px; 
-            margin-top: 40px; 
-            border-top: 2px solid #eee;
-        }
-        canvas { 
-            border: 2px dashed #ccc; 
-            max-width: 100%;
-            margin-top: 15px;
-        }
-        #result-area { 
-            margin-top: 20px; 
-            font-size: 1.1em;
-            text-align: left;
-            display: inline-block;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>顔パーツ判定サイト</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>顔パーツ判定</h1>
+    <p>キャラクターの画像をアップロードしてください</p>
+    <input type="file" id="imageUploader" accept="image/*">
+    <canvas id="canvas"></canvas> <h2>判定結果</h2>
+    <div id="result"></div>
 
-    <h1>Hello GitHub Pages 👋</h1>
-    <p>最初のページができた！</p>
-
-    <section id="denpa-analyzer-section">
-    
-        <h2>電波人間 顔パーツ分析 🔬</h2>
-        <p>分析したい電波人間の画像を選んでください。</p>
-    
-        <input type="file" id="image-loader" accept="image/*">
-    
-        <div>
-            <canvas id="image-canvas"></canvas>
-        </div>
-    
-        <div id="result-area">
-            <p>ここに分析結果が表示されます。</p>
-        </div>
-    
-    </section>
-    <script src="denpa_analyzer.js"></script>
-
+    <script src="https://docs.opencv.org/4.x/opencv.js"></script> <script src="script.js"></script>
 </body>
 </html>
